@@ -44,18 +44,33 @@ function moveBall(){
     var playgroundHeight = parseInt($("#playground").height());
     var playgroundWidth = parseInt($("#playground").width());
     var ball = pingpong.ball;
-    if (ball.y + ball.speed*ball.directionY > (playgroundHeight-20)) {
+    if (ball.y + ball.speed*ball.directionY > (playgroundHeight)) {
         ball.directionY = -1;
     }
     if (ball.y + ball.speed*ball.directionY < 0) {
         ball.directionY = 1;
     }
-    if (ball.x + ball.speed*ball.directionX > (playgroundWidth-20)) {
+//    if (ball.x + ball.speed*ball.directionX > (playgroundWidth)-20) {
+//        ball.directionX = -1;
+//    }
+//    if (ball.x + ball.speed*ball.directionX < 0) {
+//        ball.directionX = 1;
+//    }
+    if (ball.x + ball.speed*ball.directionX > playgroundWidth) {
+        ball.x = 250;
+        ball.y = 100;
+        $("#ball").css({"left":ball.x, "top":ball.y});
         ball.directionX = -1;
     }
+
     if (ball.x + ball.speed*ball.directionX < 0) {
+        ball.x = 150;
+        ball.y = 100;
+        $("#ball").css({"left":ball.x, "top":ball.y});
         ball.directionX = 1;
     }
+
+
     var paddleAX = parseInt($("#paddleA").css("left")) + parseInt($("#paddleA").css("width"));
     var paddleAYBottom = parseInt($("#paddleA").css("top")) + parseInt($("#paddleA").css("height"));
     var paddleAYTop = parseInt($("#paddleA").css("top"))
