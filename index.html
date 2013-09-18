@@ -1,33 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Ping Pong</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Ping Pong</h1>
-    </header>
-
-    <div id="game">
-        <div id="playground">
-            <div id="paddleA" class="paddle"></div>
-            <div id="paddleB" class="paddle"></div>
-            <div id="ball"></div>
-        </div>
-    </div>
-
-    <footer>
-        footer
-    </footer>
-<script src="js/jquery-1.10.1.js"></script>
-<script src="js/htl5games.pingpong.js"></script>
-<script>
-    $(function(){
-        $("#paddleB").css("top", "20px");
-        $("#paddleA").css("top", "60px");
-    })
-</script>
-</body>
-</html>
+<!DOCTYPE html><html><head>    <meta charset="UTF-8">    <title>Ping Pong</title>    <link rel="stylesheet" href="css/style.css"></head><body>    <header>        <h1>Ping Pong</h1>    </header>    <div id="scoreboard">        <div class="score">            Player A: <span id="scoreA">0</span>            Player B: <span id="scoreB">0</span>        </div>    </div>    <div id="game">        <div id="playground">            <div id="paddleA" class="paddle"></div>            <div id="paddleB" class="paddle"></div>            <div id="ball"></div>        </div>    </div>    <footer>        footer    </footer><script src="js/jquery-1.10.1.js"></script><script src="js/htl5games.pingpong.js"></script><script>    $(function(){        $("#paddleB").css("top", "20px");        $("#paddleA").css("top", "60px");    })</script></body></html>

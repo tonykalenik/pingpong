@@ -5,7 +5,11 @@
  * Time: 16:33
  * To change this template use File | Settings | File Templates.
  */
-var pingpong = {};
+var pingpong = {
+    scoreA : 0,
+    scoreB : 0
+};
+
 
 pingpong.pressedKeys = [];
 
@@ -61,6 +65,8 @@ function moveBall(){
         ball.y = 100;
         $("#ball").css({"left":ball.x, "top":ball.y});
         ball.directionX = -1;
+        pingpong.scoreA++;
+        $("#scoreA").html(pingpong.scoreA);
     }
 
     if (ball.x + ball.speed*ball.directionX < 0) {
@@ -68,6 +74,8 @@ function moveBall(){
         ball.y = 100;
         $("#ball").css({"left":ball.x, "top":ball.y});
         ball.directionX = 1;
+        pingpong.scoreB++;
+        $("#scoreB").html(pingpong.scoreB);
     }
 
 

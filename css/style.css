@@ -1,7 +1,7 @@
 #playground {
     background: #e0ffe0 url("../images/pixel_grid.jpg");
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 400px;
     position: relative;
     overflow: hidden;
 }
